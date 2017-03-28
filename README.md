@@ -55,10 +55,13 @@ HTMLを手書きする場合は、次の要素を使います。
 ## 例
 
 ```bash
+$ git clone https://github.com/ryoon/teikan-css.git
+$ cd teikan-css
 $ npm start
 ```
 
-ウェブブラウザーで http://localhost:3000/ を開くと、例を閲覧できます。
+を実行した上で、ウェブブラウザーで http://localhost:3000/ を開くと、
+例を閲覧できます。
 
 ## ライセンス
 
