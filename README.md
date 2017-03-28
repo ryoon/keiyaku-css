@@ -66,5 +66,5 @@ $ npm start
 ## ライセンス
 License: MIT
 
-- Copyright (c) 2016, 2017 Tsutomu Kawamura (keiyaku-css) all rights reserved
+- Copyright (c) 2017 Tsutomu Kawamura (keiyaku-css) all rights reserved
 - Copyright (c) 2017 Ryo ONODERA all rights reserved
