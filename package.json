@@ -1,9 +1,9 @@
 {
-  "name": "keiyaku-css",
+  "name": "teikan-css",
   "version": "1.1.0",
-  "description": "Crazy Style Formatter for Japanese Contract Document",
+  "description": "Crazy Style Formatter for Japanese Article of Incorporation",
   "files": [
-    "keiyaku.css"
+    "teikan.css"
   ],
   "scripts": {
     "start": "felt --recipe minimal --src example --debug --update always",
@@ -11,17 +11,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cognitom/keiyaku-css.git"
+    "url": "git+https://github.com/ryoon/teikan-css.git"
   },
   "keywords": [
     "css"
   ],
-  "author": "Tsutomu Kawamura",
+  "author": "Tsutomu Kawamura and Ryo ONODERA",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/cognitom/keiyaku-css/issues"
+    "url": "https://github.com/ryoon/teikan-css/issues"
   },
-  "homepage": "https://cognitom.github.io/keiyaku-css/",
+  "homepage": "https://github.com/ryoon/teikan-css/",
   "devDependencies": {
     "felt": "^0.3.1",
     "felt-recipe-minimal": "^0.2.0",

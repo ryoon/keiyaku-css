@@ -1,0 +1,86 @@
+.teikan {
+  counter-reset: teikan-chapter;
+  position: relative;
+  font-family: serif;
+}
+.teikan > h1 {
+  text-align: center;
+}
+.teikan > h1:first-child {
+  margin-top: 0;
+}
+.teikan > h2 {
+  counter-reset: teikan-paragraph;
+  counter-increment: teikan-chapter;
+}
+.teikan > h2::before {
+  content: "\7B2C" counter(teikan-chapter) "\6761\FF08";
+}
+.teikan > h2::after {
+  content: "\FF09";
+}
+.teikan > p {
+  counter-increment: teikan-paragraph;
+  text-indent: 1em;
+  padding-left: 1em;
+}
+.teikan > h1 + p,
+.teikan > h2 + p,
+.teikan > hr + p,
+.teikan > p:first-of-type {
+  text-indent: 0;
+  padding-left: 0;
+}
+.teikan > p::before {
+  content: counter(teikan-paragraph) " ";
+  font-weight: bold;
+  margin-left: -2em;
+  margin-right: 1em;
+}
+.teikan > h1 + p::before,
+.teikan > h2 + p::before,
+.teikan > hr + p::before,
+.teikan > p:first-of-type::before {
+  content: none;
+}
+.teikan > ul {
+  padding: 0 0 0 2.5em;
+}
+.teikan > ol {
+  list-style: none;
+  counter-reset: teikan-ordered-list;
+  padding: 0 0 0 2.5em;
+}
+.teikan > ol > li {
+  counter-increment: teikan-ordered-list;
+  text-indent: -2.5em;
+}
+.teikan > ol > li::before {
+  content: "\FF08" counter(teikan-ordered-list) "\FF09";
+}
+.teikan > hr {
+  border: none;
+  border-top: 1px solid black;
+  margin: 2em 0;
+}
+.teikan > h4 {
+  position: absolute;
+  margin: 0;
+  right: 30em;
+  font-size: 100%;
+}
+.teikan > h4 + ul {
+  margin: 0 0 2em auto;
+  width: 28em;
+  list-style: none;
+}
+.teikan > h4 + ul > li:last-child::after {
+  content: "\329E";
+  position: absolute;
+  right: 1em;
+}
+.teikan > blockquote {
+  border: 1px solid black;
+  padding: .5em 1.5em;
+  margin: 1em 0 1.5em;
+}

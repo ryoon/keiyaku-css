@@ -18,7 +18,7 @@ body > #wrapper {
 }
 
 #wrapper {
-  counter-reset: keiyaku-chapter;
+  counter-reset: teikan-chapter;
   position: relative;
   font-family: serif;
 }
@@ -29,17 +29,17 @@ body > #wrapper {
   margin-top: 0;
 }
 #wrapper > h2 {
-  counter-reset: keiyaku-paragraph;
-  counter-increment: keiyaku-chapter;
+  counter-reset: teikan-paragraph;
+  counter-increment: teikan-chapter;
 }
 #wrapper > h2::before {
-  content: "\7B2C" counter(keiyaku-chapter) "\6761\FF08";
+  content: "\7B2C" counter(teikan-chapter) "\6761\FF08";
 }
 #wrapper > h2::after {
   content: "\FF09";
 }
 #wrapper > p {
-  counter-increment: keiyaku-paragraph;
+  counter-increment: teikan-paragraph;
   text-indent: 1em;
   padding-left: 1em;
 }
@@ -51,7 +51,7 @@ body > #wrapper {
   padding-left: 0;
 }
 #wrapper > p::before {
-  content: counter(keiyaku-paragraph) " ";
+  content: counter(teikan-paragraph) " ";
   font-weight: bold;
   margin-left: -2em;
   margin-right: 1em;
@@ -67,15 +67,15 @@ body > #wrapper {
 }
 #wrapper > ol {
   list-style: none;
-  counter-reset: keiyaku-ordered-list;
+  counter-reset: teikan-ordered-list;
   padding: 0 0 0 2.5em;
 }
 #wrapper > ol > li {
-  counter-increment: keiyaku-ordered-list;
+  counter-increment: teikan-ordered-list;
   text-indent: -2.5em;
 }
 #wrapper > ol > li::before {
-  content: "\FF08" counter(keiyaku-ordered-list) "\FF09";
+  content: "\FF08" counter(teikan-ordered-list) "\FF09";
 }
 #wrapper > hr {
   border: none;

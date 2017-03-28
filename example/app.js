@@ -3,4 +3,4 @@ import 'whatwg-fetch'
 
 fetch('contract.md')
   .then(response => response.text())
-  .then(md => document.querySelector('.keiyaku').innerHTML = marked(md))
+  .then(md => document.querySelector('.teikan').innerHTML = marked(md))
