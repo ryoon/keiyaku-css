@@ -64,5 +64,7 @@ $ npm start
 例を閲覧できます。
 
 ## ライセンス
+License: MIT
 
-MIT (c) Tsutomu Kawamura (keiyaku-css) and Ryo ONODERA
+- Copyright (c) 2016, 2017 Tsutomu Kawamura (keiyaku-css) all rights reserved
+- Copyright (c) 2017 Ryo ONODERA all rights reserved
