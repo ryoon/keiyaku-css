@@ -1,42 +1,26 @@
-# Keiyaku CSS
+# Teikan CSS
 
-> Crazy Style Formatter for Japanese Contract Document
-
-Unfortunately, the style in Japanese contract document is totally crazy. I hope this CSS library cures that a bit:
-
-0. write a document logically structured in markdown or HTML,
-0. apply `keiyaku-css` to it
-0. then, you'll get a well-formed document
-0. *good luck!*
+> Crazy Style Formatter for Japanese aricles of incorporation document
 
 ## 概要
 
-Keiyaku CSS（以下、「本件ライブラリ」という。）は、Markdownで書かれた契約文書を、適切な印刷書式にスタイリングするための、CSSライブラリです。
-
-ユーザ（以下、「甲」という。）は、製作者（以下、「乙」という。）が開発した本件ライブラリについて、以下のとおり使用することが可能です。
-
-## 目的
-
-本件ライブラリの目的は、法務の方からダメ出しされないことです。
+Teikan CSSは、会社の定款を、適切な印刷書式にスタイリングするための
+CSSライブラリです。
 
 ## インストール
 
-[ここからCSSファイルをダウンロード](https://raw.githubusercontent.com/cognitom/keiyaku-css/master/keiyaku.css)するか、npm経由でインストールします。
-
-```bash
-$ npm install --save keiyaku-css
-```
+[ここからCSSファイルをダウンロード](https://raw.githubusercontent.com/ryoon/teikan-css/master/teikan.css)してください。
 
 HTMLの`HEAD`内にCSSファイルを読み込みます。
 
 ```html
-<link rel="stylesheet" href="path/to/keiyaku.css">
+<link rel="stylesheet" href="path/to/teikan.css">
 ```
 
-本件ライブラリを使用したいセクションに、`keiyaku`クラスを付加します。(`div`タグなどでも構いません)
+本件ライブラリを使用したいセクションに、`teikan`クラスを付加します。(`div`タグなどでも構いません)
 
 ```html
-<section class="keiyaku"></section>
+<section class="teikan"></section>
 ```
 
 上記セクション内に、必要なHTMLを書き入れます。
@@ -46,7 +30,8 @@ HTMLの`HEAD`内にCSSファイルを読み込みます。
 HTMLを手書きする場合は、次の要素を使います。
 
 - `<h1>文書のタイトル</h1>`
-- `<h2>見出しタイトル(条)</h2>`
+- `<h2>見出しタイトル(章)</h2>`
+- `<h3>見出しタイトル(条)</h3>`
 - `<ul><li>箇条書き</li></ul>`
 - `<ol><li>箇条書き(連番)</li><ol>`
 - `<hr>` 署名欄の開始
@@ -55,38 +40,26 @@ HTMLを手書きする場合は、次の要素を使います。
 
 ## 使い方・Markdown編
 
-本件ライブラリの使用が想定されているのは、主にMarkdownを使う場合です。下記のように書くことで可読性の高い契約文書を作成でき(ると期待し)ます。
+本件ライブラリの使用が想定されているのは、主にMarkdownを使う場合です。
+下記のように書くことで可読性の高い定款を作成でき(ると期待し)ます。
 
 - 文書のタイトル: `#`
-- 見出しタイトル(条): `##`
+- 見出しタイトル(章): `##`
+- 見出しタイトル(条): `###`
 - 箇条書き: `-`
 - 箇条書き(連番): `1.`, `2.`, ...
 - 署名欄: `---`で始める
 - 署名欄・見出し: `####`
 - 署名欄・項目: `-` (最後の項目には、自動的に`印`マークが付きます)
 
-## 使用例
+## 例
 
-- [建物賃貸借契約書](https://cognitom.github.io/keiyaku-css/example/contract) ([markdown](https://raw.githubusercontent.com/cognitom/keiyaku-css/master/example/contract.md))
+```bash
+$ npm start
+```
 
-## エディタで使う
-
-下記のテーマファイルを、所定のフォルダに読み込みます。
-
-- [テーマファイル for Caret](https://raw.githubusercontent.com/cognitom/keiyaku-css/master/editor-support/keiyaku-caret.css)
-- [テーマファイル for Marked 2](https://raw.githubusercontent.com/cognitom/keiyaku-css/master/editor-support/keiyaku-marked2.css)
+ウェブブラウザーで http://localhost:3000/ を開くと、例を閲覧できます。
 
 ## ライセンス
 
-MIT © Tsutomu Kawamura
-
----
-2017年1月吉日
-
-#### 甲
-- 住所:
-- 氏名: Your Name
-
-#### 乙
-- 住所: 東京都世田谷区 下北沢オープンソースCafe
-- 氏名: Tsutomu Kawamura
+MIT (c) Tsutomu Kawamura (keiyaku-css) and Ryo ONODERA
