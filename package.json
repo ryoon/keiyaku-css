@@ -1,6 +1,6 @@
 {
   "name": "teikan-css",
-  "version": "1.1.0",
+  "version": "0.1.0",
   "description": "Crazy Style Formatter for Japanese Article of Incorporation",
   "files": [
     "teikan.css"
