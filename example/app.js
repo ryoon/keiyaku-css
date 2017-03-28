@@ -1,6 +1,6 @@
 import marked from 'marked'
 import 'whatwg-fetch'
 
-fetch('contract.md')
+fetch('teikan.md')
   .then(response => response.text())
   .then(md => document.querySelector('.teikan').innerHTML = marked(md))
