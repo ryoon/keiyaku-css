@@ -1,5 +1,5 @@
 .teikan {
-  counter-reset: teikan-chapter;
+  counter-reset: teikan-chapter, teikan-clause;
   position: relative;
   font-family: serif;
 }
@@ -10,13 +10,21 @@
   margin-top: 0;
 }
 .teikan > h2 {
+  text-align: center;
   counter-reset: teikan-paragraph;
   counter-increment: teikan-chapter;
 }
-.teikan > h2::before {
-  content: "\7B2C" counter(teikan-chapter) "\6761\FF08";
+.teikan > h3 {
+  counter-reset: teikan-paragraph;
+  counter-increment: teikan-clause;
 }
-.teikan > h2::after {
+.teikan > h2::before {
+  content: "\7B2C" counter(teikan-chapter) "\7AE0\3000";
+}
+.teikan > h3::before {
+  content: "\7B2C" counter(teikan-clause) "\6761\FF08";
+}
+.teikan > h3::after {
   content: "\FF09";
 }
 .teikan > p {
@@ -26,6 +34,7 @@
 }
 .teikan > h1 + p,
 .teikan > h2 + p,
+.teikan > h3 + p,
 .teikan > hr + p,
 .teikan > p:first-of-type {
   text-indent: 0;
@@ -39,6 +48,7 @@
 }
 .teikan > h1 + p::before,
 .teikan > h2 + p::before,
+.teikan > h3 + p::before,
 .teikan > hr + p::before,
 .teikan > p:first-of-type::before {
   content: none;
@@ -64,6 +74,7 @@
   margin: 2em 0;
 }
 .teikan > h4 {
+  font-weight: normal;
   position: absolute;
   margin: 0;
   right: 30em;
